@@ -1,4 +1,4 @@
-# 🧠 Reconhecimento Facial com Flask e Dlib
+o# 🧠 Reconhecimento Facial com Flask e Dlib
 
 Este projeto é uma aplicação em **Python** que utiliza **Flask**, **OpenCV**, **Dlib** e **Pillow** para realizar **reconhecimento facial**.  
 O sistema permite **registrar** e **validar** usuários com base em suas imagens faciais, associando cada rosto a um **perfil de investidor** (Conservador, Moderado ou Agressivo).
@@ -26,48 +26,21 @@ dlib_face_recognition_resnet_model_v1.dat
 
 ---
 
-## ⚙️ Requisitos
-
-Antes de rodar o projeto, instale as dependências necessárias:
-
-```bash
-pip install flask dlib opencv-python Pillow numpy
-```
-
-Também é necessário baixar os seguintes arquivos de modelo da Dlib e colocá-los na mesma pasta do projeto:
-
-- [shape_predictor_5_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_5_face_landmarks.dat.bz2)
-- [dlib_face_recognition_resnet_model_v1.dat.bz2](http://dlib.net/files/dlib_face_recognition_resnet_model_v1.dat.bz2)
-
-Após o download, descompacte os arquivos (`.bz2`).
-
----
-
 ## ▶️ Como Executar o Projeto
 
 1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/seuusuario/nome-do-repositorio.git
-   cd nome-do-repositorio
-   ```
 
 2. **Instale as dependências**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(caso não exista um arquivo requirements.txt, use os comandos da seção de requisitos)*
 
 3. **Execute o servidor Flask**
-   ```bash
-   python Sprint4.py
-   ```
 
 4. O servidor será iniciado em:
    ```
    http://127.0.0.1:5000
    ```
-
 ---
+
+###Recomendo o uso do script mencionado no vídeo.
 
 #### Exemplo de Registro
 ```bash
@@ -94,10 +67,5 @@ curl -X POST http://127.0.0.1:5000/upload \
 - `Usuário não reconhecido.`
 - `Nenhum rosto detectado.`
 - `Ação inválida.`
+- `Codigo 200, 400 e etc.`
 
----
-
-
-## 🏷️ Licença
-
-Este projeto é de uso **acadêmico** e **livre para fins de estudo e aprendizado**.
