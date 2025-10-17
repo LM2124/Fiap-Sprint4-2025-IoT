@@ -1,9 +1,7 @@
-o# 🧠 Reconhecimento Facial com Flask e Dlib
+# 🧠 Reconhecimento Facial com Flask e Dlib
 
 Este projeto é uma aplicação em **Python** que utiliza **Flask**, **OpenCV**, **Dlib** e **Pillow** para realizar **reconhecimento facial**.  
 O sistema permite **registrar** e **validar** usuários com base em suas imagens faciais, associando cada rosto a um **perfil de investidor** (Conservador, Moderado ou Agressivo).
-
----
 
 ## 🚀 Funcionalidades
 
@@ -13,58 +11,48 @@ O sistema permite **registrar** e **validar** usuários com base em suas imagens
 - Processamento e reconhecimento facial com **Dlib**  
 - API REST simples com **Flask**
 
----
-
-## 📁 Estrutura do Projeto
-
-```
-Sprint4.py  
-db.pkl  
-shape_predictor_5_face_landmarks.dat  
-dlib_face_recognition_resnet_model_v1.dat
-```
-
----
-
 ## ▶️ Como Executar o Projeto
 
-1. **Clone o repositório**
+- **Clone o repositório**
 
-2. **Instale as dependências**
+  ```bash
+  git clone https://github.com/LM2124/Fiap-Sprint4-2025-IoT.git
+  ```
 
-3. **Execute o servidor Flask**
+- **Instale as dependências**
 
-4. O servidor será iniciado em:
-   ```
-   http://127.0.0.1:5000
-   ```
----
+  ```bash
+  pip install -r requirements.txt
+  ```
 
-###Recomendo o uso do script mencionado no vídeo.
+- **Execute o servidor Flask**
 
-#### Exemplo de Registro
+  ```bash
+  python main.py
+  ```
+
+  **O servidor será iniciado em:** `http://127.0.0.1:5000`
+
+- **Teste os endpoints (Opcional):**
+
+  ```bash
+  python test_endpoint.py
+  ```
+
+### Exemplo de Registro
+
 ```bash
 curl -X POST http://127.0.0.1:5000/upload \
-  -F "image=@foto_lorenzo.jpg" \
+  -F "image=@foto1.jpg" \
   -F "action=register" \
   -F "nome=nome" \
   -F "tipo=Agressivo"
 ```
 
-#### Exemplo de Validação
+### Exemplo de Validação
+
 ```bash
 curl -X POST http://127.0.0.1:5000/upload \
-  -F "image=@foto_nome.jpg" \
+  -F "image=@foto2.jpg" \
   -F "action=validate"
 ```
-
----
-
-## 💬 Possíveis Respostas
-
-200 - Usuário cadastrado com sucesso: Nome (Agressivo)
-200 - Bem vindo, Nome! (Bem-vindo, investidor agressivo! Prepare-se para explorar oportunidades de alto risco com grandes potenciais de retorno!)
-401 - Usuário não reconhecido.
-422 - Nenhum rosto detectado.
-400 - Ação inválida.
-
