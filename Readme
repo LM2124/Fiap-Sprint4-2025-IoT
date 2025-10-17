@@ -62,10 +62,9 @@ curl -X POST http://127.0.0.1:5000/upload \
 
 ## 💬 Possíveis Respostas
 
-- `Usuário cadastrado com sucesso: Nome (Agressivo)`
-- `Bem vindo, Nome! (Bem-vindo, investidor agressivo! Prepare-se para explorar oportunidades de alto risco com grandes potenciais de retorno!)`
-- `Usuário não reconhecido.`
-- `Nenhum rosto detectado.`
-- `Ação inválida.`
-- `Codigo 200, 400 e etc.`
+200 - Usuário cadastrado com sucesso: Nome (Agressivo)
+200 - Bem vindo, Nome! (Bem-vindo, investidor agressivo! Prepare-se para explorar oportunidades de alto risco com grandes potenciais de retorno!)
+401 - Usuário não reconhecido.
+422 - Nenhum rosto detectado.
+400 - Ação inválida.
 
